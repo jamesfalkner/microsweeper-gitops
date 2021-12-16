@@ -2,7 +2,7 @@ config:
   argocd:
     namespace: openshift-gitops
   pipelines:
-    name: microsweeper-cicd
+    name: cicd
 environments:
 - apps:
   - name: app-microsweeper-quarkus
@@ -11,19 +11,19 @@ environments:
       pipelines:
         integration:
           bindings:
-          - microsweeper-dev-app-microsweeper-quarkus-microsweeper-quarkus-binding
+          - dev-app-microsweeper-quarkus-microsweeper-quarkus-binding
           - github-push-binding
       source_url: https://github.com/jamesfalkner/microsweeper-quarkus.git
       webhook:
         secret:
-          name: webhook-secret-microsweeper-dev-microsweeper-quarkus
-          namespace: microsweeper-cicd
-  name: microsweeper-dev
+          name: webhook-secret-dev-microsweeper-quarkus
+          namespace: cicd
+  name: dev
   pipelines:
     integration:
       bindings:
       - github-push-binding
       template: app-ci-template
-- name: microsweeper-stage
+- name: stage
 gitops_url: https://github.com/jamesfalkner/microsweeper-gitops.git
 version: 1

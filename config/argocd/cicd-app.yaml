@@ -6,7 +6,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: microsweeper-cicd
+    namespace: cicd
     server: https://kubernetes.default.svc
   ignoreDifferences:
   - group: argoproj.io
@@ -31,7 +31,7 @@ spec:
     kind: Route
   project: default
   source:
-    path: config/microsweeper-cicd/overlays
+    path: config/cicd/overlays
     repoURL: https://github.com/jamesfalkner/microsweeper-gitops.git
   syncPolicy:
     automated:
