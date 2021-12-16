@@ -1,0 +1,3 @@
+resources:
+- microsweeper-dev-environment.yaml
+- microsweeper-dev-rolebinding.yaml

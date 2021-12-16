@@ -1,0 +1,61 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  creationTimestamp: null
+  name: cicd-event-listener
+  namespace: microsweeper-cicd
+spec:
+  namespaceSelector: {}
+  resources: {}
+  serviceAccountName: pipeline
+  triggers:
+  - bindings:
+    - ref: github-push-binding
+    interceptors:
+    - params:
+      - name: secretRef
+        value:
+          secretKey: webhook-secret-key
+          secretName: gitops-webhook-secret
+      ref:
+        name: github
+    - params:
+      - name: filter
+        value: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
+          == 'jamesfalkner/microsweeper-gitops')
+      - name: overlays
+        value:
+        - expression: body.ref.split('/')[2]
+          key: ref
+      ref:
+        name: cel
+    name: ci-dryrun-from-push
+    template:
+      ref: ci-dryrun-from-push-template
+  - bindings:
+    - ref: microsweeper-dev-app-microsweeper-quarkus-microsweeper-quarkus-binding
+    - ref: github-push-binding
+    interceptors:
+    - params:
+      - name: secretRef
+        value:
+          secretKey: webhook-secret-key
+          secretName: webhook-secret-microsweeper-dev-microsweeper-quarkus
+      ref:
+        name: github
+    - params:
+      - name: filter
+        value: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
+          == 'jamesfalkner/microsweeper-quarkus')
+      - name: overlays
+        value:
+        - expression: body.ref.split('/')[2]
+          key: ref
+      ref:
+        name: cel
+    name: app-ci-build-from-push-microsweeper-quarkus
+    template:
+      ref: app-ci-template
+status:
+  configuration:
+    generatedName: ""

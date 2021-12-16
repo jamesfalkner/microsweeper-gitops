@@ -1,0 +1,6 @@
+resources:
+- argo-app.yaml
+- cicd-app.yaml
+- microsweeper-dev-app-microsweeper-quarkus-app.yaml
+- microsweeper-dev-env-app.yaml
+- microsweeper-stage-env-app.yaml
