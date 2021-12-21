@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    app.openshift.io/vcs-uri: https://github.com/jamesfalkner/microsweeper-quarkus
+  labels:
+    app.kubernetes.io/name: microsweeper-quarkus
+    app.kubernetes.io/part-of: app-microsweeper-quarkus
+  name: microsweeper-quarkus
+  namespace: stage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: microsweeper-quarkus
+      app.kubernetes.io/part-of: app-microsweeper-quarkus
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/name: microsweeper-quarkus
+        app.kubernetes.io/part-of: app-microsweeper-quarkus
+    spec:
+      containers:
+      - image: quay.io/jfalkner1/microsweeper-quarkus:main-4e673ba011d978206b604f40534787c770e0409e
+        imagePullPolicy: Always
+        name: microsweeper-quarkus
+        ports:
+        - containerPort: 8080
+        resources: {}
+      serviceAccountName: default
+status: {}

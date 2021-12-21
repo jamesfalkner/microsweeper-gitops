@@ -1,0 +1,6 @@
+resources:
+- 100-deployment.yaml
+- 101-dbdeployment.yaml
+- 200-service.yaml
+- 201-dbservice.yaml
+- 300-route.yaml
