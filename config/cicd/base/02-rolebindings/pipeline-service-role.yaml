@@ -32,8 +32,8 @@ rules:
   - create
   - patch
 - apiGroups:
-  - apps
-  - routes
+  - apps.openshift.io
+  - route.openshift.io
   resources:
   - deployments
   - deploymentconfigs
