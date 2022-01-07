@@ -35,6 +35,8 @@ rules:
   - apps
   resources:
   - deployments
+  - deploymentconfigs
+  - routes
   verbs:
   - get
   - create
