@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: microsweeper-quarkus
     app.kubernetes.io/part-of: app-microsweeper-quarkus
   name: microsweeper-quarkus
-  namespace: stage
+  namespace: prod
 spec:
   ports:
   - name: http

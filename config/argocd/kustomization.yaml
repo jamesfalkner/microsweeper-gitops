@@ -3,4 +3,4 @@ resources:
 - cicd-app.yaml
 - dev-app-microsweeper-quarkus-app.yaml
 - dev-env-app.yaml
-- stage-env-app.yaml
+- prod-env-app.yaml

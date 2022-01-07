@@ -4,15 +4,15 @@ metadata:
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: app-microsweeper-quarkus
-  name: stage-app-microsweeper-quarkus
+  name: prod-app-microsweeper-quarkus
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: stage
+    namespace: prod
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: environments/stage/apps/app-microsweeper-quarkus/overlays
+    path: environments/prod/apps/app-microsweeper-quarkus/overlays
     repoURL: https://github.com/jamesfalkner/microsweeper-gitops.git
   syncPolicy:
     automated:

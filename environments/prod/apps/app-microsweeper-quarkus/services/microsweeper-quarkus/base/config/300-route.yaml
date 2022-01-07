@@ -3,7 +3,7 @@ kind: Route
 metadata:
   creationTimestamp: null
   name: microsweeper-quarkus
-  namespace: stage
+  namespace: prod
 spec:
   port:
     targetPort: http
