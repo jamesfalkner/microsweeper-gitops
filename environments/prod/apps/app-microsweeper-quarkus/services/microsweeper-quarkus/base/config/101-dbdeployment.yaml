@@ -10,17 +10,6 @@ spec:
       timeoutSeconds: 600
     resources: {}
     activeDeadlineSeconds: 21600
-  triggers:
-    - type: ImageChange
-      imageChangeParams:
-        automatic: true
-        containerNames:
-          - postgresql
-        from:
-          kind: ImageStreamTag
-          namespace: openshift
-          name: 'postgresql:10-el8'
-    - type: ConfigChange
   replicas: 1
   revisionHistoryLimit: 10
   test: false
@@ -82,6 +71,7 @@ spec:
           ports:
             - containerPort: 5432
               protocol: TCP
+          image: postgresql:10-el8
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: postgresql-data
