@@ -7,7 +7,7 @@ metadata:
 spec:
   destination:
     namespace: prod
-    server: prodcluster
+    server: theprod
   project: default
   source:
     path: environments/prod/env/overlays
