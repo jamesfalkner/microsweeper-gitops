@@ -9,7 +9,7 @@ metadata:
 spec:
   destination:
     namespace: prod
-    server: theprod
+    server: https://api.theprod.rh-apps.org:6443
   project: default
   source:
     path: environments/prod/apps/app-microsweeper-quarkus/overlays
