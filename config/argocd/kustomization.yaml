@@ -2,6 +2,4 @@ resources:
 - argo-app.yaml
 - cicd-app.yaml
 - dev-app-microsweeper-quarkus-app.yaml
-- prod-app-microsweeper-quarkus-app.yaml
 - dev-env-app.yaml
-- prod-env-app.yaml
