@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/part-of: app-microsweeper-quarkus
     spec:
       containers:
-      - image: quay.io/jfalkner1/microsweeper-quarkus:main-4e673ba011d978206b604f40534787c770e0409e
+      - image: quay.io/jfalkner1/microsweeper-quarkus:main-23bf80830031a8a2109fd5af96ea4920995b7be1
         imagePullPolicy: Always
         name: microsweeper-quarkus
         ports:
