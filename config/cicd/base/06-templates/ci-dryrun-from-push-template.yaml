@@ -1,7 +1,6 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerTemplate
 metadata:
-  creationTimestamp: null
   name: ci-dryrun-from-push-template
   namespace: cicd
 spec:
@@ -19,7 +18,6 @@ spec:
   - apiVersion: tekton.dev/v1beta1
     kind: PipelineRun
     metadata:
-      creationTimestamp: null
       name: ci-dryrun-from-push-$(uid)
     spec:
       params:

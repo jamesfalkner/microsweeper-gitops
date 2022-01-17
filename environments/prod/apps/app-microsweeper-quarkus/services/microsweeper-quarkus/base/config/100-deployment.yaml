@@ -17,7 +17,6 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app.kubernetes.io/name: microsweeper-quarkus
         app.kubernetes.io/part-of: app-microsweeper-quarkus

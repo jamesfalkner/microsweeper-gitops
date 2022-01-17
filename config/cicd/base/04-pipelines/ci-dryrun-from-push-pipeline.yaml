@@ -1,7 +1,6 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  creationTimestamp: null
   name: ci-dryrun-from-push-pipeline
   namespace: cicd
 spec:

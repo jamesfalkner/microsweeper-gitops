@@ -1,7 +1,6 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
-  creationTimestamp: null
   name: dev-app-microsweeper-quarkus-microsweeper-quarkus-binding
   namespace: cicd
 spec:
