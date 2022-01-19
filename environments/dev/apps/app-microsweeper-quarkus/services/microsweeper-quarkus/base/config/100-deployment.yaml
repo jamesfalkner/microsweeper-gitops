@@ -24,7 +24,7 @@ spec:
         app.openshift.io/runtime: quarkus
     spec:
       containers:
-      - image: quay.io/jfalkner1/microsweeper-quarkus:main-23bf80830031a8a2109fd5af96ea4920995b7be1
+      - image: quay.io/jfalkner1/microsweeper-quarkus:main-c5d938b45f9d5251744e82b8008027d8be471eaf
         imagePullPolicy: Always
         name: microsweeper-quarkus
         env:
