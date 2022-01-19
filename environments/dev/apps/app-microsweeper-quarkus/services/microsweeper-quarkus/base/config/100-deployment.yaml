@@ -18,6 +18,8 @@ spec:
   strategy: {}
   template:
     metadata:
+      annotations:
+        app.openshift.io/connects-to: postgresql
       labels:
         app.kubernetes.io/name: microsweeper-quarkus
         app.kubernetes.io/part-of: app-microsweeper-quarkus
