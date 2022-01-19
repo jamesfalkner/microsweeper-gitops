@@ -3,6 +3,9 @@ apiVersion: apps.openshift.io/v1
 metadata:
   name: postgresql
   namespace: prod
+  labels:
+    app.openshift.io/runtime: postgresql
+
 spec:
   strategy:
     type: Recreate
@@ -19,6 +22,7 @@ spec:
     metadata:
       labels:
         name: postgresql
+        app.openshift.io/runtime: postgresql
     spec:
       volumes:
         - name: postgresql-data

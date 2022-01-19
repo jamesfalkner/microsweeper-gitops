@@ -19,6 +19,7 @@ spec:
     metadata:
       labels:
         name: postgresql
+        app.openshift.io/runtime: postgresql
     spec:
       volumes:
         - name: postgresql-data

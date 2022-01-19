@@ -6,6 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: microsweeper-quarkus
     app.kubernetes.io/part-of: app-microsweeper-quarkus
+    app.openshift.io/runtime: quarkus
   name: microsweeper-quarkus
   namespace: prod
 spec:
@@ -20,6 +21,7 @@ spec:
       labels:
         app.kubernetes.io/name: microsweeper-quarkus
         app.kubernetes.io/part-of: app-microsweeper-quarkus
+        app.openshift.io/runtime: quarkus
     spec:
       containers:
       - image: quay.io/jfalkner1/microsweeper-quarkus:main-23bf80830031a8a2109fd5af96ea4920995b7be1
