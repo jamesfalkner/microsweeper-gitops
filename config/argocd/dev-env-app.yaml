@@ -10,6 +10,7 @@ spec:
   project: default
   source:
     path: environments/dev/env/overlays
+    # UPDATEME
     repoURL: https://github.com/jamesfalkner/microsweeper-gitops.git
   syncPolicy:
     automated:

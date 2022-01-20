@@ -31,6 +31,7 @@ spec:
   project: default
   source:
     path: config/cicd/overlays
+    # UPDATEME
     repoURL: https://github.com/jamesfalkner/microsweeper-gitops.git
   syncPolicy:
     automated:

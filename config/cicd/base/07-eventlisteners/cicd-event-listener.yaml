@@ -20,6 +20,7 @@ spec:
         name: github
     - params:
       - name: filter
+        # UPDATEME
         value: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
           == 'jamesfalkner/microsweeper-gitops')
       - name: overlays
@@ -44,6 +45,7 @@ spec:
         name: github
     - params:
       - name: filter
+        # UPDATEME
         value: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
           == 'jamesfalkner/microsweeper-quarkus')
       - name: overlays

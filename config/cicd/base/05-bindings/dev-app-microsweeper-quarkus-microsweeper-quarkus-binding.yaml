@@ -6,6 +6,7 @@ metadata:
 spec:
   params:
   - name: imageRepo
+    # UPDATEME
     value: quay.io/jfalkner1/microsweeper-quarkus
   - name: tlsVerify
     value: "true"

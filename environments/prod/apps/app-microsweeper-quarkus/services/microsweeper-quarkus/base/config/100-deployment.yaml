@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    # UPDATEME
     app.openshift.io/vcs-uri: https://github.com/jamesfalkner/microsweeper-quarkus
   labels:
     app.kubernetes.io/name: microsweeper-quarkus
@@ -26,6 +27,7 @@ spec:
         app.openshift.io/runtime: quarkus
     spec:
       containers:
+        # UPDATEME
       - image: quay.io/jfalkner1/microsweeper-quarkus:main-23bf80830031a8a2109fd5af96ea4920995b7be1
         imagePullPolicy: Always
         name: microsweeper-quarkus

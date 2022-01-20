@@ -12,6 +12,7 @@ spec:
   project: default
   source:
     path: environments/dev/apps/app-microsweeper-quarkus/overlays
+    # UPDATEME
     repoURL: https://github.com/jamesfalkner/microsweeper-gitops.git
   syncPolicy:
     automated:
